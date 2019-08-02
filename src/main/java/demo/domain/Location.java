@@ -18,7 +18,6 @@ import java.util.Date;
 @Entity
 @Data
 @Table(name = "LOCATIONS")
-
 public class Location {
 
     enum GpsStatus{
@@ -57,7 +56,7 @@ public class Location {
     private Date timestamp = new Date();
     private String gearProvide;
     private RunnerMovementType runnerMovementType;
-    private String serviceTyper;
+    private String serviceType;
 
     public Location() { this.unitInfo = null; }
 
@@ -67,4 +66,5 @@ public class Location {
     public Location(UnitInfo unitInfo) { this.unitInfo = unitInfo; }
 
     public String getRunningId() { return this.unitInfo == null ? null : this.unitInfo.getRunningId(); }
+
 }
